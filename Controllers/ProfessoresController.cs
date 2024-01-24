@@ -59,6 +59,7 @@ namespace Classnotes.Controllers
         {
             if (ModelState.IsValid)
             {
+                professor.Senha = BCrypt.Net.BCrypt.HashPassword(professor.Senha);
                 _context.Add(professor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +99,8 @@ namespace Classnotes.Controllers
             {
                 try
                 {
+
+                    professor.Senha = BCrypt.Net.BCrypt.HashPassword(professor.Senha);
                     _context.Update(professor);
                     await _context.SaveChangesAsync();
                 }

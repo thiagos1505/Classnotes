@@ -14,7 +14,7 @@ namespace Classnotes.Models
         public string? Nome { get; set; }
 
         [Required(ErrorMessage = "O campo turno é obrigatório")]
-        public Turno turno { get; set; }
+        public Turno Turno { get; set; }
 
         [Required(ErrorMessage = "O campo ano é obrigatório")]
         public int Ano { get; set; }

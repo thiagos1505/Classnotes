@@ -59,6 +59,7 @@ namespace Classnotes.Controllers
         {
             if (ModelState.IsValid)
             {
+                pais.Senha = BCrypt.Net.BCrypt.HashPassword(pais.Senha);
                 _context.Add(pais);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +99,7 @@ namespace Classnotes.Controllers
             {
                 try
                 {
+                    pais.Senha = BCrypt.Net.BCrypt.HashPassword(pais.Senha);
                     _context.Update(pais);
                     await _context.SaveChangesAsync();
                 }
