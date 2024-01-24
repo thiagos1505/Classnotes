@@ -19,6 +19,7 @@ namespace Classnotes.Models
         [Required(ErrorMessage = "O campo ano é obrigatório")]
         public int Ano { get; set; }
 
+        [Display(Name = "Professor responsável")]
         public int ProfessorId { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace Classnotes.Models
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Pais> Pais { get; set; }
         public DbSet<Classnotes.Models.Professor> Professor { get; set; } = default!;
+        public DbSet<Classnotes.Models.Turma> Turma { get; set; } = default!;
 
     }
 }    
