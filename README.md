@@ -26,3 +26,8 @@ Dado o cenário apresentado, surgiu uma simples porém efetiva solução, que bu
 - comunicados e/ou dúvidas dos pais
 
 Já pensou ter essas e outras soluções na palma da sua mão? Conheça o Classnotes!
+
+
+### Tecnologias utilizadas
+
+O Classnotes está sendo desenvolvido utilizando a plataforma .NET da Microsoft, com a linguagem C#, o framework .NET Core MVC e também como ORM, o Entity Framework. Para o front-end, a princípio será utilizado o Bootstrap.
