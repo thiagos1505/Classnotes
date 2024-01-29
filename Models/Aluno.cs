@@ -9,13 +9,13 @@ namespace Classnotes.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "O campo nome é obrigatório")]
+        [Required(ErrorMessage = "Você precisa informar o nome do aluno!")]
         public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "O campo sobrenome é obrigatório")]
+        [Required(ErrorMessage = "O sobrenome também")]
         public string? Sobrenome { get; set; }
 
-        [Required(ErrorMessage = "O campo data de nascimento é obrigatório")]
+        [Required(ErrorMessage = "Precisamos saber a data de nascimento!")]
         [Display(Name = "Data de Nascimento")]
         public string? DataNascimento { get; set; }
 

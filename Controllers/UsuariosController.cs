@@ -9,87 +9,87 @@ using Classnotes.Models;
 
 namespace Classnotes.Controllers
 {
-    public class TurmasController : Controller
+    public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
 
-        public TurmasController(AppDbContext context)
+        public UsuariosController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Turmas
+        // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-              return _context.Turmas != null ? 
-                          View(await _context.Turmas.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Turma'  is null.");
+              return _context.Usuarios != null ? 
+                          View(await _context.Usuarios.ToListAsync()) :
+                          Problem("Entity set 'AppDbContext.Professor'  is null.");
         }
 
-        // GET: Turmas/Details/5
+        // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Turmas == null)
+            if (id == null || _context.Usuarios == null)
             {
                 return NotFound();
             }
 
-            var turma = await _context.Turmas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (turma == null)
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.UsuarioId == id);
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return View(turma);
+            return View(usuario);
         }
 
-        // GET: Turmas/Create
+        // GET: Usuarios/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Turmas/Create
+        // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,turno,Ano,ProfessorId")] Turma turma)
+        public async Task<IActionResult> Create([Bind("UsuarioId,Nome,Sobrenome,Email,Senha,Cpf,Telefone,TipoUsuario")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(turma);
+                _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(turma);
+            return View(usuario);
         }
 
-        // GET: Turmas/Edit/5
+        // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Turmas == null)
+            if (id == null || _context.Usuarios == null)
             {
                 return NotFound();
             }
 
-            var turma = await _context.Turmas.FindAsync(id);
-            if (turma == null)
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
             {
                 return NotFound();
             }
-            return View(turma);
+            return View(usuario);
         }
 
-        // POST: Turmas/Edit/5
+        // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,turno,Ano,ProfessorId")] Turma turma)
+        public async Task<IActionResult> Edit(int id, [Bind("UsuarioId,Nome,Sobrenome,Email,Senha,Cpf,Telefone,TipoUsuario")] Usuario usuario)
         {
-            if (id != turma.Id)
+            if (id != usuario.UsuarioId)
             {
                 return NotFound();
             }
@@ -98,12 +98,12 @@ namespace Classnotes.Controllers
             {
                 try
                 {
-                    _context.Update(turma);
+                    _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TurmaExists(turma.Id))
+                    if (!UsuarioExists(usuario.UsuarioId))
                     {
                         return NotFound();
                     }
@@ -114,49 +114,49 @@ namespace Classnotes.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(turma);
+            return View(usuario);
         }
 
-        // GET: Turmas/Delete/5
+        // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Turmas == null)
+            if (id == null || _context.Usuarios == null)
             {
                 return NotFound();
             }
 
-            var turma = await _context.Turmas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (turma == null)
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.UsuarioId == id);
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return View(turma);
+            return View(usuario);
         }
 
-        // POST: Turmas/Delete/5
+        // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Turmas == null)
+            if (_context.Usuarios == null)
             {
-                return Problem("Entity set 'AppDbContext.Turma'  is null.");
+                return Problem("Entity set 'AppDbContext.Professor'  is null.");
             }
-            var turma = await _context.Turmas.FindAsync(id);
-            if (turma != null)
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario != null)
             {
-                _context.Turmas.Remove(turma);
+                _context.Usuarios.Remove(usuario);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TurmaExists(int id)
+        private bool UsuarioExists(int id)
         {
-          return (_context.Turmas?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Usuarios?.Any(e => e.UsuarioId == id)).GetValueOrDefault();
         }
     }
 }

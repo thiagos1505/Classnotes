@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Classnotes.Models
 {
 
+    [Table("Usuarios")]
     public class Usuario
     {
         [Key]
@@ -36,6 +37,7 @@ namespace Classnotes.Models
         [Required(ErrorMessage = "Precisamos do seu endereço também!")]
         public Endereco EnderecoUsuario { get; set; }
 
+        [Display(Name = "Tipo de Usuário")]
         public TipoUsuario TipoUsuario { get; set; }
 
     }
