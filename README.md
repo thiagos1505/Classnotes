@@ -1,9 +1,9 @@
 ### Problema
 
-Na maioria das escolas de educação infantil a comunicação da instituição para com os pais ocorre de formas mais tradicionais, seja por e-mail, ligações ou até mesmo bilhetes na agenda. Isso nos trás dois problemas principais: 
+Você já parou pra pensar que maioria das escolas de educação infantil, a comunicação da instituição com os pais ocorre de maneira arcaica das formas mais tradicionais, seja por e-mail, ligações ou até mesmo bilhetes na agenda. Isso nos trás dois problemas principais: 
 
 
-1. Muitos pais tem uma rotina muito corrida e não conseguem muitas vezes, acompanhar as rotinas e demandas da escola do filho, muito menos os recados e comunicados enviados
+1. Muitos pais acabam tendo uma rotina muito corrida e não conseguem, muitas vezes, acompanhar as rotinas e demandas da escola do filho, muito menos os recados e comunicados enviados
 2. Por se tratar de crianças, muitas vezes não é possível garantir que os recados cheguem até os pais e que a comunicação seja feita de forma efetiva
 
 
@@ -24,3 +24,10 @@ Dado o cenário apresentado, surgiu uma simples porém efetiva solução, que bu
 - recados dos professores sobre o aluno em específico;
 - informações dos pais acerca de alguma particularidade de seu filho como intolerância a lactose, alergia a certos alimentos;
 - comunicados e/ou dúvidas dos pais
+
+Já pensou ter essas e outras soluções na palma da sua mão? Conheça o Classnotes!
+
+
+### Tecnologias utilizadas
+
+O Classnotes está sendo desenvolvido por mim, utilizando a plataforma .NET da Microsoft, por meio da linguagem C#, o framework .NET Core MVC e também como ORM utilizado, o Entity Framework. Para o front-end, a princípio será utilizado o Bootstrap, mas isso poderá ser alterado ao longo do caminho.
