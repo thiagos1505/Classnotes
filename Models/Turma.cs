@@ -10,13 +10,14 @@ namespace Classnotes.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "O campo nome é obrigatório")]
+        [Required(ErrorMessage = "Informe o nome da turma!")]
+        [Display(Name = "Nome da turma")]
         public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "O campo turno é obrigatório")]
+        [Required(ErrorMessage = "Precisamos saber o turno!")]
         public Turno Turno { get; set; }
 
-        [Required(ErrorMessage = "O campo ano é obrigatório")]
+        [Required(ErrorMessage = "E o ano também")]
         public int Ano { get; set; }
 
         [Display(Name = "Professor responsável")]

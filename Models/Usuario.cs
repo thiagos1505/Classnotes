@@ -53,18 +53,24 @@ namespace Classnotes.Models
         [Key]
         public int EnderecoId { get; set; }
 
+        [Required(ErrorMessage = "Precisamos saber a sua rua!")]
         public string? Rua { get; set; }
 
+        [Required(ErrorMessage = "Precisamos saber o seu bairro tambem!")]
         public string? Bairro { get; set; }
 
+        [Required(ErrorMessage = "Precisamos saber o número da sua casa!")]
         public int Numero { get; set; }
 
         public string? Complemento { get; set; }
 
+        [Required(ErrorMessage = "Por favor informar a cidade!")]
         public string? Cidade { get; set; }
 
+        [Required(ErrorMessage = "Por favor informar o estado!")]
         public string? Estado { get; set; }
 
+        [Required(ErrorMessage = "Por favor informar o CEP!")]
         public string? Cep { get; set; }
     }
 
