@@ -30,4 +30,4 @@ Já pensou ter essas e outras soluções na palma da sua mão? Conheça o Classn
 
 ### Tecnologias utilizadas
 
-O Classnotes está sendo desenvolvido utilizando a plataforma .NET da Microsoft, com a linguagem C#, o framework .NET Core MVC e também como ORM, o Entity Framework. Para o front-end, a princípio será utilizado o Bootstrap.
+O Classnotes está sendo desenvolvido por mim, utilizando a plataforma .NET da Microsoft, por meio da linguagem C#, o framework .NET Core MVC e também como ORM utilizado, o Entity Framework. Para o front-end, a princípio será utilizado o Bootstrap, mas isso poderá ser alterado ao longo do caminho.
