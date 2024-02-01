@@ -3,6 +3,13 @@
 [![Licença](https://img.shields.io/badge/Licen%C3%A7a-Propriet%C3%A1ria-brightgreen.svg)](LICENSE)
 [![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue.svg)](CHANGELOG.md)
 
+## Atenção
+
+Devido a circustâncias do momento no trabalho, decidi pausar brevemento o desenvolvimento deste projeto para focar em outro mais condizente com o momento, espero retornar o mais breve possível.
+
+
+
+
 ## Problema
 
 Você já parou para pensar que na maioria das escolas de educação infantil, a comunicação entre a instituição e os pais ocorre de maneira arcaica, utilizando métodos tradicionais como e-mail, ligações ou bilhetes na agenda? Isso nos traz dois problemas principais:
